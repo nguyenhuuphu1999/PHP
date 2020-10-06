@@ -30,11 +30,32 @@ include 'modal.php';
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <?php $this ->?>
-                    </td>
-                </tr>
+              
+                        <?php 
+                                if(file_exists('danh_sach.txt'))
+                                {
+                                    $file =fopen('danh_sach.txt',"r");
+                                    //doc file theo dong
+                                    while(!feof($file))
+                                    {
+                                        $dong = fgets($file);
+
+                                        if($dong){
+                                            $thong_tin_sach =new sach();
+                                            $thong_tin_sach->chuyen_dong_thanh_thong_tin($dong);
+                                            // print_r($thong_tin_sach);
+                                            $thong_tin_sach->in_sach();
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    echo 'khong co file can mo';
+                                }
+                              
+                        ?>
+                          
+
             </tbody>
         </table>
         
