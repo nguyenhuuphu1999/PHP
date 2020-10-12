@@ -7,7 +7,7 @@
           return $this ->SDT." at ".$this->get_time();
       }
 
-      protected function get_time(){
+      protected function get_time(){        
           return date('y:m:d');
       }
 

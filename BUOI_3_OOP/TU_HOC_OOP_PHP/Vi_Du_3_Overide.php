@@ -9,12 +9,15 @@
 
     class student extends person{
         public $notice = "Noi dung da bi ghi de";
-
+       
         public function getMessage()
         {
+            parent ::getMessage();
+            
             echo $this->notice;
         }
     }
-    $sinh_vien_1 =new student;
-     $sinh_vien_1 ->getMessage();
+    $sinh_vien= new student;
+    echo $sinh_vien->getMessage();
+   
 ?>
