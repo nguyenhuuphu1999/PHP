@@ -1,0 +1,34 @@
+.item img {
+    width: 100%;
+}
+
+hr {
+    height: 10px;
+    color: black;
+    margin-top: 5px;
+}
+
+.container>b {
+    font-size: 15pt;
+    color: blue;
+}
+
+.best_sile {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    z-index: 1;
+}
+
+.number {
+    position: absolute;
+    font-size: 20pt;
+    color: red;
+    z-index: 2;
+    top: 30px;
+    left: 22px;
+}
+
+.content {
+    margin-top: 10px;
+}
